@@ -1,8 +1,8 @@
 import * as types from '../actions/actionType';
 export function courseReducer(state = [], action) {
     switch (action.type) {
-        case types.CREATE_COURSE:
-            return [...state, Object.assign({}, action.course)];
+        case types.LOAD_COURSES_SUCCESS:
+            return action.courses;
         // break;
 
         default:
